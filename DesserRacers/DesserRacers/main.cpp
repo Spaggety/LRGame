@@ -40,6 +40,14 @@ int main(int, char const**)
     sf::Sprite sprite(texture);
     //*********************************************************************************************************
     //Description:
+    sf::Texture sierra;
+    if(!sierra.loadFromFile(resourcePath() + "desertMenuUp.png")){
+        return EXIT_FAILURE;
+    }
+    sf::Sprite sierraMenu(sierra);
+    
+    //*********************************************************************************************************
+    //Description:
     MainMenu menu(window.getSize().x, window.getSize().y);
     //*********************************************************************************************************
     //Description:
@@ -48,11 +56,20 @@ int main(int, char const**)
         return EXIT_FAILURE;
     }
     sf::Text text("PRESS THE", font, 40);
-    sf::Text spaceText("SPACE", font, 40);
+    sf::Text spaceText("SPACE", font, 50);
     text.setPosition(10, 780);
     text.setFillColor(sf::Color::White);
     spaceText.setPosition(400, 780);
-    spaceText.setFillColor(sf::Color::Magenta);
+    spaceText.setFillColor(sf::Color::Black);
+    //*********************************************************************************************************
+    //Description:
+    sf::Music music;
+    if (!music.openFromFile(resourcePath() + "videoplayback.ogg")) {
+        return EXIT_FAILURE;
+    }
+    
+    // Play the music
+    music.play();
     while(window.isOpen()){
         sf::Event event;
         while(window.pollEvent(event)){
@@ -60,6 +77,7 @@ int main(int, char const**)
             switch (event.key.code)
             {
                 case sf::Keyboard::Space:
+                    //Main Menu State
                     while (window.isOpen())
                     {
                         // Process events
@@ -77,7 +95,7 @@ int main(int, char const**)
                                     switch (menu.getSelectedItemIndex())
                                 {
                                     case 0:
-                                        
+                                        //Game State 
                                         break;
                                     case 1:
                                         cout << "Options not available" << endl;
@@ -98,7 +116,9 @@ int main(int, char const**)
                                 window.clear();
                             }
                         }
+                    
                         window.clear();
+                        window.draw(sierraMenu);
                         menu.draw(window);
                         window.display();
 

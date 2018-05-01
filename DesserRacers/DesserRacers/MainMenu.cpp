@@ -14,7 +14,7 @@ MainMenu::MainMenu(float width, float height){
     if(!font.loadFromFile(resourcePath() + "baby blocks.ttf")){
         return EXIT_FAILURE;
     }
-    
+
     menu[0].setFont(font);
     menu[0].setFillColor(sf::Color::White);
     menu[0].setString("Play");
@@ -37,7 +37,9 @@ void MainMenu::draw(sf::RenderWindow &window){
     for (int i = 0; i < MAX_NUMBER_OF_ITMES; i++)
     {
         window.draw(menu[i]);
+        
     }
+    
 }
 void MainMenu::moveUp()
 {
