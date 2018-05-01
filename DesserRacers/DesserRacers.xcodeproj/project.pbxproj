@@ -7,29 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B11745920900F0400ADF60E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B11745820900F0400ADF60E /* main.cpp */; };
-		9B11746220900F0400ADF60E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B11746120900F0400ADF60E /* icon.png */; };
-		9B11746C209024D000ADF60E /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B11746A209024D000ADF60E /* StateMachine.cpp */; };
-		9BF6BF64209030D9008EB876 /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6BF62209030D9008EB876 /* AssetManager.cpp */; };
-		9BF6BF6720903EC3008EB876 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6BF6520903EC3008EB876 /* InputManager.cpp */; };
+		9B85809120956CC800A2922B /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B85809020956CC800A2922B /* ResourcePath.mm */; };
+		9B85809420956CC800A2922B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B85809320956CC800A2922B /* main.cpp */; };
+		9B85809720956CC800A2922B /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B85809620956CC800A2922B /* cute_image.jpg */; };
+		9B85809920956CC800A2922B /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 9B85809820956CC800A2922B /* nice_music.ogg */; };
+		9B85809B20956CC800A2922B /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B85809A20956CC800A2922B /* sansation.ttf */; };
+		9B85809D20956CC800A2922B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B85809C20956CC800A2922B /* icon.png */; };
+		9B8580A82095702300A2922B /* Surface.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8580A72095702300A2922B /* Surface.png */; };
+		9BCAC75320981AB6000E5638 /* Intro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC75120981AB6000E5638 /* Intro.cpp */; };
+		9BCAC75620981B2D000E5638 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC75420981B2D000E5638 /* MainMenu.cpp */; };
+		9BCAC75820981C96000E5638 /* baby blocks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC75720981C96000E5638 /* baby blocks.ttf */; };
+		9BCAC75D209823BB000E5638 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC75B209823BB000E5638 /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B11745020900F0400ADF60E /* Dessert Racers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dessert Racers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B11745420900F0400ADF60E /* Dessert Racers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dessert Racers-Info.plist"; sourceTree = "<group>"; };
-		9B11745820900F0400ADF60E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		9B11746120900F0400ADF60E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		9B117469209014CD00ADF60E /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
-		9B11746A209024D000ADF60E /* StateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
-		9B11746B209024D000ADF60E /* StateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
-		9BF6BF62209030D9008EB876 /* AssetManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
-		9BF6BF63209030D9008EB876 /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
-		9BF6BF6520903EC3008EB876 /* InputManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
-		9BF6BF6620903EC3008EB876 /* InputManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
+		9B85808B20956CC800A2922B /* DesserRacers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesserRacers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B85808F20956CC800A2922B /* DesserRacers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DesserRacers-Info.plist"; sourceTree = "<group>"; };
+		9B85809020956CC800A2922B /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		9B85809220956CC800A2922B /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		9B85809320956CC800A2922B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9B85809620956CC800A2922B /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
+		9B85809820956CC800A2922B /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
+		9B85809A20956CC800A2922B /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
+		9B85809C20956CC800A2922B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9B8580A72095702300A2922B /* Surface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Surface.png; path = ../../../../Surface.png; sourceTree = "<group>"; };
+		9BCAC75120981AB6000E5638 /* Intro.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Intro.cpp; sourceTree = "<group>"; };
+		9BCAC75220981AB6000E5638 /* Intro.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Intro.hpp; sourceTree = "<group>"; };
+		9BCAC75420981B2D000E5638 /* MainMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
+		9BCAC75520981B2D000E5638 /* MainMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMenu.hpp; sourceTree = "<group>"; };
+		9BCAC75720981C96000E5638 /* baby blocks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "baby blocks.ttf"; path = "../../../../baby blocks.ttf"; sourceTree = "<group>"; };
+		9BCAC75B209823BB000E5638 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		9BCAC75C209823BB000E5638 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B11744C20900F0400ADF60E /* Frameworks */ = {
+		9B85808720956CC800A2922B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,121 +51,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B11744620900F0400ADF60E = {
+		9B85808120956CC800A2922B = {
 			isa = PBXGroup;
 			children = (
-				9B11745220900F0400ADF60E /* Dessert Racers */,
-				9B11745120900F0400ADF60E /* Products */,
-				9B11745A20900F0400ADF60E /* Resources */,
+				9B85808D20956CC800A2922B /* DesserRacers */,
+				9B85808C20956CC800A2922B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9B11745120900F0400ADF60E /* Products */ = {
+		9B85808C20956CC800A2922B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B11745020900F0400ADF60E /* Dessert Racers.app */,
+				9B85808B20956CC800A2922B /* DesserRacers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B11745220900F0400ADF60E /* Dessert Racers */ = {
+		9B85808D20956CC800A2922B /* DesserRacers */ = {
 			isa = PBXGroup;
 			children = (
-				9B117469209014CD00ADF60E /* State.hpp */,
-				9B11745820900F0400ADF60E /* main.cpp */,
-				9B11746A209024D000ADF60E /* StateMachine.cpp */,
-				9B11746B209024D000ADF60E /* StateMachine.hpp */,
-				9BF6BF62209030D9008EB876 /* AssetManager.cpp */,
-				9BF6BF63209030D9008EB876 /* AssetManager.hpp */,
-				9BF6BF6520903EC3008EB876 /* InputManager.cpp */,
-				9BF6BF6620903EC3008EB876 /* InputManager.hpp */,
+				9BCAC75B209823BB000E5638 /* Game.cpp */,
+				9BCAC75C209823BB000E5638 /* Game.hpp */,
+				9BCAC75420981B2D000E5638 /* MainMenu.cpp */,
+				9BCAC75520981B2D000E5638 /* MainMenu.hpp */,
+				9BCAC75120981AB6000E5638 /* Intro.cpp */,
+				9BCAC75220981AB6000E5638 /* Intro.hpp */,
+				9B85809020956CC800A2922B /* ResourcePath.mm */,
+				9B85809220956CC800A2922B /* ResourcePath.hpp */,
+				9B85809320956CC800A2922B /* main.cpp */,
+				9B85809520956CC800A2922B /* Resources */,
+				9B85808E20956CC800A2922B /* Supporting Files */,
 			);
-			path = "Dessert Racers";
+			path = DesserRacers;
 			sourceTree = "<group>";
 		};
-		9B11745320900F0400ADF60E /* Supporting Files */ = {
+		9B85808E20956CC800A2922B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B11745420900F0400ADF60E /* Dessert Racers-Info.plist */,
+				9B85808F20956CC800A2922B /* DesserRacers-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9B11745A20900F0400ADF60E /* Resources */ = {
+		9B85809520956CC800A2922B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9B11745320900F0400ADF60E /* Supporting Files */,
-				9B11746120900F0400ADF60E /* icon.png */,
+				9BCAC75720981C96000E5638 /* baby blocks.ttf */,
+				9B8580A72095702300A2922B /* Surface.png */,
+				9B85809620956CC800A2922B /* cute_image.jpg */,
+				9B85809820956CC800A2922B /* nice_music.ogg */,
+				9B85809A20956CC800A2922B /* sansation.ttf */,
+				9B85809C20956CC800A2922B /* icon.png */,
 			);
 			name = Resources;
-			path = "Dessert Racers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B11744F20900F0400ADF60E /* Dessert Racers */ = {
+		9B85808A20956CC800A2922B /* DesserRacers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B11746520900F0400ADF60E /* Build configuration list for PBXNativeTarget "Dessert Racers" */;
+			buildConfigurationList = 9B8580A020956CC800A2922B /* Build configuration list for PBXNativeTarget "DesserRacers" */;
 			buildPhases = (
-				9B11744B20900F0400ADF60E /* Sources */,
-				9B11744C20900F0400ADF60E /* Frameworks */,
-				9B11744D20900F0400ADF60E /* Resources */,
-				9B11744E20900F0400ADF60E /* ShellScript */,
+				9B85808620956CC800A2922B /* Sources */,
+				9B85808720956CC800A2922B /* Frameworks */,
+				9B85808820956CC800A2922B /* Resources */,
+				9B85808920956CC800A2922B /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Dessert Racers";
-			productName = "Dessert Racers";
-			productReference = 9B11745020900F0400ADF60E /* Dessert Racers.app */;
+			name = DesserRacers;
+			productName = DesserRacers;
+			productReference = 9B85808B20956CC800A2922B /* DesserRacers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9B11744720900F0400ADF60E /* Project object */ = {
+		9B85808220956CC800A2922B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Enrique Mosqueda";
 				TargetAttributes = {
-					9B11744F20900F0400ADF60E = {
+					9B85808A20956CC800A2922B = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
-			buildConfigurationList = 9B11744A20900F0400ADF60E /* Build configuration list for PBXProject "Dessert Racers" */;
+			buildConfigurationList = 9B85808520956CC800A2922B /* Build configuration list for PBXProject "DesserRacers" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9B11744620900F0400ADF60E;
-			productRefGroup = 9B11745120900F0400ADF60E /* Products */;
+			mainGroup = 9B85808120956CC800A2922B;
+			productRefGroup = 9B85808C20956CC800A2922B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B11744F20900F0400ADF60E /* Dessert Racers */,
+				9B85808A20956CC800A2922B /* DesserRacers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B11744D20900F0400ADF60E /* Resources */ = {
+		9B85808820956CC800A2922B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B11746220900F0400ADF60E /* icon.png in Resources */,
+				9B85809D20956CC800A2922B /* icon.png in Resources */,
+				9BCAC75820981C96000E5638 /* baby blocks.ttf in Resources */,
+				9B85809B20956CC800A2922B /* sansation.ttf in Resources */,
+				9B85809920956CC800A2922B /* nice_music.ogg in Resources */,
+				9B85809720956CC800A2922B /* cute_image.jpg in Resources */,
+				9B8580A82095702300A2922B /* Surface.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9B11744E20900F0400ADF60E /* ShellScript */ = {
+		9B85808920956CC800A2922B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -169,21 +191,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B11744B20900F0400ADF60E /* Sources */ = {
+		9B85808620956CC800A2922B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF6BF6720903EC3008EB876 /* InputManager.cpp in Sources */,
-				9BF6BF64209030D9008EB876 /* AssetManager.cpp in Sources */,
-				9B11745920900F0400ADF60E /* main.cpp in Sources */,
-				9B11746C209024D000ADF60E /* StateMachine.cpp in Sources */,
+				9BCAC75320981AB6000E5638 /* Intro.cpp in Sources */,
+				9B85809420956CC800A2922B /* main.cpp in Sources */,
+				9B85809120956CC800A2922B /* ResourcePath.mm in Sources */,
+				9BCAC75620981B2D000E5638 /* MainMenu.cpp in Sources */,
+				9BCAC75D209823BB000E5638 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9B11746320900F0400ADF60E /* Debug */ = {
+		9B85809E20956CC800A2922B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -227,7 +250,7 @@
 			};
 			name = Debug;
 		};
-		9B11746420900F0400ADF60E /* Release */ = {
+		9B85809F20956CC800A2922B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -271,21 +294,21 @@
 			};
 			name = Release;
 		};
-		9B11746620900F0400ADF60E /* Debug */ = {
+		9B8580A120956CC800A2922B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Dessert Racers/Dessert Racers-Info.plist";
+				INFOPLIST_FILE = "DesserRacers/DesserRacers-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		9B11746720900F0400ADF60E /* Release */ = {
+		9B8580A220956CC800A2922B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Dessert Racers/Dessert Racers-Info.plist";
+				INFOPLIST_FILE = "DesserRacers/DesserRacers-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -294,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B11744A20900F0400ADF60E /* Build configuration list for PBXProject "Dessert Racers" */ = {
+		9B85808520956CC800A2922B /* Build configuration list for PBXProject "DesserRacers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B11746320900F0400ADF60E /* Debug */,
-				9B11746420900F0400ADF60E /* Release */,
+				9B85809E20956CC800A2922B /* Debug */,
+				9B85809F20956CC800A2922B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B11746520900F0400ADF60E /* Build configuration list for PBXNativeTarget "Dessert Racers" */ = {
+		9B8580A020956CC800A2922B /* Build configuration list for PBXNativeTarget "DesserRacers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B11746620900F0400ADF60E /* Debug */,
-				9B11746720900F0400ADF60E /* Release */,
+				9B8580A120956CC800A2922B /* Debug */,
+				9B8580A220956CC800A2922B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9B11744720900F0400ADF60E /* Project object */;
+	rootObject = 9B85808220956CC800A2922B /* Project object */;
 }
