@@ -11,13 +11,15 @@
 		9B85809420956CC800A2922B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B85809320956CC800A2922B /* main.cpp */; };
 		9B85809B20956CC800A2922B /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B85809A20956CC800A2922B /* sansation.ttf */; };
 		9B8580A82095702300A2922B /* Surface.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B8580A72095702300A2922B /* Surface.png */; };
-		9BCAC75320981AB6000E5638 /* Intro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC75120981AB6000E5638 /* Intro.cpp */; };
 		9BCAC75620981B2D000E5638 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC75420981B2D000E5638 /* MainMenu.cpp */; };
 		9BCAC75820981C96000E5638 /* baby blocks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC75720981C96000E5638 /* baby blocks.ttf */; };
-		9BCAC75D209823BB000E5638 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC75B209823BB000E5638 /* Game.cpp */; };
 		9BCAC78920983959000E5638 /* videoplayback.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC78820983959000E5638 /* videoplayback.ogg */; };
-		9BCAC78B209843AD000E5638 /* desertMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC78A209843AD000E5638 /* desertMenu.png */; };
-		9BCAC78D2098D059000E5638 /* desertMenuUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC78C2098D059000E5638 /* desertMenuUp.png */; };
+		9BCAC79120993848000E5638 /* desertMenu3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC79020993847000E5638 /* desertMenu3.png */; };
+		9BCAC794209A8658000E5638 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC792209A8658000E5638 /* Entity.cpp */; };
+		9BCAC797209A86C0000E5638 /* Car.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC795209A86C0000E5638 /* Car.cpp */; };
+		9BCAC799209A8CD3000E5638 /* redCar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC798209A8CD3000E5638 /* redCar.png */; };
+		9BCAC79B209AA28A000E5638 /* gameBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC79A209AA28A000E5638 /* gameBackground2.png */; };
+		9BCAC79E209BCD82000E5638 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC79C209BCD82000E5638 /* Obstacle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,16 +30,19 @@
 		9B85809320956CC800A2922B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B85809A20956CC800A2922B /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		9B8580A72095702300A2922B /* Surface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Surface.png; path = ../../../../Surface.png; sourceTree = "<group>"; };
-		9BCAC75120981AB6000E5638 /* Intro.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Intro.cpp; sourceTree = "<group>"; };
-		9BCAC75220981AB6000E5638 /* Intro.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Intro.hpp; sourceTree = "<group>"; };
 		9BCAC75420981B2D000E5638 /* MainMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
 		9BCAC75520981B2D000E5638 /* MainMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMenu.hpp; sourceTree = "<group>"; };
 		9BCAC75720981C96000E5638 /* baby blocks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "baby blocks.ttf"; path = "../../../../baby blocks.ttf"; sourceTree = "<group>"; };
-		9BCAC75B209823BB000E5638 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		9BCAC75C209823BB000E5638 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		9BCAC78820983959000E5638 /* videoplayback.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = videoplayback.ogg; path = ../../../../videoplayback.ogg; sourceTree = "<group>"; };
-		9BCAC78A209843AD000E5638 /* desertMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desertMenu.png; path = ../../../../desertMenu.png; sourceTree = "<group>"; };
-		9BCAC78C2098D059000E5638 /* desertMenuUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desertMenuUp.png; path = ../../../../desertMenuUp.png; sourceTree = "<group>"; };
+		9BCAC79020993847000E5638 /* desertMenu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desertMenu3.png; path = ../../../../desertMenu3.png; sourceTree = "<group>"; };
+		9BCAC792209A8658000E5638 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		9BCAC793209A8658000E5638 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		9BCAC795209A86C0000E5638 /* Car.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Car.cpp; sourceTree = "<group>"; };
+		9BCAC796209A86C0000E5638 /* Car.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Car.hpp; sourceTree = "<group>"; };
+		9BCAC798209A8CD3000E5638 /* redCar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redCar.png; path = ../../../../redCar.png; sourceTree = "<group>"; };
+		9BCAC79A209AA28A000E5638 /* gameBackground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameBackground2.png; path = ../../../../gameBackground2.png; sourceTree = "<group>"; };
+		9BCAC79C209BCD82000E5638 /* Obstacle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
+		9BCAC79D209BCD82000E5638 /* Obstacle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Obstacle.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +75,14 @@
 		9B85808D20956CC800A2922B /* DesserRacers */ = {
 			isa = PBXGroup;
 			children = (
-				9BCAC75B209823BB000E5638 /* Game.cpp */,
-				9BCAC75C209823BB000E5638 /* Game.hpp */,
+				9BCAC79C209BCD82000E5638 /* Obstacle.cpp */,
+				9BCAC79D209BCD82000E5638 /* Obstacle.hpp */,
+				9BCAC795209A86C0000E5638 /* Car.cpp */,
+				9BCAC796209A86C0000E5638 /* Car.hpp */,
+				9BCAC792209A8658000E5638 /* Entity.cpp */,
+				9BCAC793209A8658000E5638 /* Entity.hpp */,
 				9BCAC75420981B2D000E5638 /* MainMenu.cpp */,
 				9BCAC75520981B2D000E5638 /* MainMenu.hpp */,
-				9BCAC75120981AB6000E5638 /* Intro.cpp */,
-				9BCAC75220981AB6000E5638 /* Intro.hpp */,
 				9B85809020956CC800A2922B /* ResourcePath.mm */,
 				9B85809220956CC800A2922B /* ResourcePath.hpp */,
 				9B85809320956CC800A2922B /* main.cpp */,
@@ -96,8 +103,9 @@
 		9B85809520956CC800A2922B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9BCAC78C2098D059000E5638 /* desertMenuUp.png */,
-				9BCAC78A209843AD000E5638 /* desertMenu.png */,
+				9BCAC79A209AA28A000E5638 /* gameBackground2.png */,
+				9BCAC798209A8CD3000E5638 /* redCar.png */,
+				9BCAC79020993847000E5638 /* desertMenu3.png */,
 				9BCAC78820983959000E5638 /* videoplayback.ogg */,
 				9BCAC75720981C96000E5638 /* baby blocks.ttf */,
 				9B8580A72095702300A2922B /* Surface.png */,
@@ -164,11 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BCAC75820981C96000E5638 /* baby blocks.ttf in Resources */,
-				9BCAC78B209843AD000E5638 /* desertMenu.png in Resources */,
-				9BCAC78D2098D059000E5638 /* desertMenuUp.png in Resources */,
+				9BCAC79120993848000E5638 /* desertMenu3.png in Resources */,
 				9B85809B20956CC800A2922B /* sansation.ttf in Resources */,
+				9BCAC799209A8CD3000E5638 /* redCar.png in Resources */,
 				9BCAC78920983959000E5638 /* videoplayback.ogg in Resources */,
 				9B8580A82095702300A2922B /* Surface.png in Resources */,
+				9BCAC79B209AA28A000E5638 /* gameBackground2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,11 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BCAC75320981AB6000E5638 /* Intro.cpp in Sources */,
+				9BCAC794209A8658000E5638 /* Entity.cpp in Sources */,
 				9B85809420956CC800A2922B /* main.cpp in Sources */,
+				9BCAC79E209BCD82000E5638 /* Obstacle.cpp in Sources */,
 				9B85809120956CC800A2922B /* ResourcePath.mm in Sources */,
 				9BCAC75620981B2D000E5638 /* MainMenu.cpp in Sources */,
-				9BCAC75D209823BB000E5638 /* Game.cpp in Sources */,
+				9BCAC797209A86C0000E5638 /* Car.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

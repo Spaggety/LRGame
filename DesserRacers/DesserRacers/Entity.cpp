@@ -1,9 +1,9 @@
 //
-//  Game.cpp
+//  Entity.cpp
 //  DesserRacers
 //
-//  Created by Enrique Mosqueda on 4/30/18.
+//  Created by Enrique Mosqueda on 5/2/18.
 //  Copyright © 2018 Enrique Mosqueda. All rights reserved.
 //
 
-#include "Game.hpp"
+#include "Entity.hpp"
