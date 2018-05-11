@@ -7,7 +7,8 @@
 //
 
 #include <SFML/Graphics.hpp>
-#pragma once
+#ifndef MA
+#define MA
 #define MAX_NUMBER_OF_ITMES 3
 
 
@@ -28,3 +29,4 @@ private:
     int selectedItem = 1;
     
 };
+#endif

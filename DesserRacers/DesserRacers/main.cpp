@@ -40,14 +40,14 @@ int main(int, char const**)
     //*********************************************************************************************************
     //INTRO RESOURCE RECOVERY
     sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "Surface.png"))
+    if (!texture.loadFromFile("Surface.png"))
         return EXIT_FAILURE;
     
     sf::Sprite sprite(texture);
     //*********************************************************************************************************
     //MAIN MENU RESOURCE RECOVERY
     sf::Texture sierra;
-    if(!sierra.loadFromFile(resourcePath() + "desertMenu3.png"))
+    if(!sierra.loadFromFile("desertMenu3.png"))
         return EXIT_FAILURE;
     
     sf::Sprite sierraMenu(sierra);
@@ -55,7 +55,7 @@ int main(int, char const**)
     MainMenu menu(window.getSize().x, window.getSize().y);
     
     sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "baby blocks.ttf"))
+    if (!font.loadFromFile("baby blocks.ttf"))
         return EXIT_FAILURE;
     sf::Text text("PRESS THE", font, 40);
     sf::Text spaceText("SPACE", font, 50);
@@ -68,7 +68,7 @@ int main(int, char const**)
     //GAME RESOURCE RECOVERY
     //       ____Car____
     sf::Texture carSprite;
-    if(!carSprite.loadFromFile(resourcePath() + "redCar.png")){
+    if(!carSprite.loadFromFile("redCar.png")){
         return -1;
     }
     sf::Sprite redCarSpriteSheet(carSprite);
@@ -76,7 +76,7 @@ int main(int, char const**)
     redCar1.sprite.setTexture(carSprite);
     //       ____Game Background____
     sf::Texture gameBackground;
-    if(!gameBackground.loadFromFile(resourcePath() + "gameBackground2.png"))
+    if(!gameBackground.loadFromFile("gameBackground2.png"))
         return -1;
     sf:: Sprite gameBackgroundSierra(gameBackground);
     //       ____Obstacles____
@@ -95,7 +95,7 @@ int main(int, char const**)
     //*********************************************************************************************************
     //Description:
     sf::Music music;
-    if (!music.openFromFile(resourcePath() + "videoplayback.ogg")) {
+    if (!music.openFromFile("videoplayback.ogg")) {
         return EXIT_FAILURE;
     }
     music.play();
