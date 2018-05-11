@@ -1,4 +1,3 @@
-
 //
 // Disclaimer:
 // ----------
@@ -23,15 +22,18 @@
 #include "Car.hpp"
 #include "Obstacle.hpp"
 #include <iostream>
+#include <fstream>
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 1024
 #define SCREEN_TITLE "Sierra Racers"
-#define OBSTACLE_SPAWN_FREQUENCY 0.3f
+#define OBSTACLE_SPAWN_FREQUENCY 1.0f
 
 using namespace std;
 int main(int, char const**)
 {
     int counter = 0;
+    bool pause = false;
+    
     //*********************************************************************************************************
     //Description: Creates window with defined parameters from #include DEFINED.HPP
     sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT),SCREEN_TITLE);
@@ -51,7 +53,7 @@ int main(int, char const**)
     sf::Sprite sierraMenu(sierra);
     
     MainMenu menu(window.getSize().x, window.getSize().y);
-   
+    
     sf::Font font;
     if (!font.loadFromFile(resourcePath() + "baby blocks.ttf"))
         return EXIT_FAILURE;
@@ -83,6 +85,17 @@ int main(int, char const**)
     vector<Obstacle> obstacleArray2;
     
     sf::Clock currentTime;
+    sf::Clock distanceClock;
+    //       ____GameOver____
+    sf::Text gameOver("GAME OVER", font, 80);
+    gameOver.setPosition(20, 200);
+    gameOver.setFillColor(sf::Color::Red);
+    
+    sf::Text scoreEnd("Your Score", font, 80);
+    scoreEnd.setPosition(20,300);
+    scoreEnd.setFillColor(sf::Color::Green);
+    
+    
     //*********************************************************************************************************
     //Description:
     sf::Music music;
@@ -90,15 +103,11 @@ int main(int, char const**)
         return EXIT_FAILURE;
     }
     music.play();
-
-	//projectile and colliding 
-
-
-   
+    
     //FIRST GAME LOOP
     while(window.isOpen()){
         sf::Event event;
-        Obstacle newObs;
+        
         while(window.pollEvent(event)){
             
             switch (event.key.code)
@@ -107,6 +116,7 @@ int main(int, char const**)
                     //Main Menu State
                     while (window.isOpen())
                     {
+                        Obstacle newObs;
                         // Process events
                         while (window.pollEvent(event))
                         {
@@ -125,20 +135,9 @@ int main(int, char const**)
                                         //Enters Game State
                                         while (window.isOpen())
                                         {
+                                            Obstacle obstacle;
                                             while (window.pollEvent(event))
                                             {
-                                                switch (event.key.code)
-                                                {
-                                                    case sf::Keyboard::Up:
-                                                        cout << "create boolean that is true to run make obstacles fall" << endl;
-                                                        break;
-                                                    case sf::Keyboard::Right:
-                                                        cout << "moving right" << endl;
-                                                        break;
-                                                    case sf::Keyboard::Left:
-                                                        cout << "move left" << endl;
-                                                        break;
-                                                }
                                                 // Close window: exi/Users/Wicky/Desktop/ResourcePath.mmt
                                                 if (event.type == sf::Event::Closed) {
                                                     window.close();
@@ -149,42 +148,55 @@ int main(int, char const**)
                                                 }
                                             }
                                             window.clear();
+                                            
                                             redCar1.updating();
                                             window.draw(gameBackgroundSierra);
-                                            Obstacle obstacle;
                                             if(currentTime.getElapsedTime().asSeconds() > OBSTACLE_SPAWN_FREQUENCY){
-                                                obstacleArray2.push_back(newObs);
-                                                obstacleArray1.push_back(obstacle);
-                                                currentTime.restart();
+                                                if(pause == false){
+                                                    obstacleArray2.push_back(newObs);
+                                                    obstacleArray1.push_back(obstacle);
+                                                    currentTime.restart();
+                                                }
+                                                
                                             }
                                             counter = 0;
                                             for(iter = obstacleArray1.begin(); iter != obstacleArray1.end(); iter++){
-                                                if(counter % 2 == 0){
-                                                    obstacleArray1[counter].updating();
-                                                    window.draw(obstacleArray1[counter].rectangle);
+                                                if(pause == false){
+                                                    if(counter % 2 == 0){
+                                                        obstacleArray1[counter].updating();
+                                                        window.draw(obstacleArray1[counter].rectangle);
+                                                    }
+                                                    else if(counter % 2 == 1){
+                                                        obstacleArray2[counter].updating();
+                                                        window.draw(obstacleArray2[counter].rectangle);
+                                                    }
+                                                    counter++;
                                                 }
-                                                else if(counter % 2 == 1){
-                                                    obstacleArray2[counter].updating();
-                                                    window.draw(obstacleArray2[counter].rectangle);
-                                                }
-                                                counter++;
-												
                                                 
                                             }
-											//collision loop
-											counter=0;
-											for(iter = obstacleArray1.begin(); iter != obstacleArray1.end(); iter++){
-                                                if(obstacleArray1[counter].rect.getGlobalBounds().intersect(redCar1().rect.getGlobalBounds())){
-                                                 	cout << "crash" << endl;
-                                            	}
-												counter++;
+                                            //collision
+                                            counter = 0;
+                                            for(iter = obstacleArray1.begin(); iter != obstacleArray1.end(); iter++){
+                                                if(obstacleArray1[counter].rectangle.getGlobalBounds().intersects(redCar1.rectangle.getGlobalBounds())){
+                                                    
+                                                    pause = true;
+                                                    
+                                                }
+                                                
+                                                
+                                                counter++;
                                             }
-											
-                                            redCar1.movement();
+
+                                            if(pause == true){
+                                                window.draw(gameOver);
+                                            }
+                                            if(pause == false){
+                                                redCar1.movement();
+                                            }
                                             window.draw(redCar1.sprite);
                                             window.display();
-                                    }
-                                    //ends Game State
+                                        }
+                                        //ends Game State
                                     case 1:
                                         cout << "Options" << endl;
                                         break;
@@ -192,7 +204,7 @@ int main(int, char const**)
                                         window.close();
                                         break;
                                 }
-                                        
+                                    
                             }
                             // Close window: exi/Users/Wicky/Desktop/ResourcePath.mmt
                             if (event.type == sf::Event::Closed) {
@@ -204,38 +216,39 @@ int main(int, char const**)
                                 window.clear();
                             }
                         }
-                       
-                       
+                        
+                        
                         
                         window.clear();
                         window.draw(sierraMenu);
                         menu.draw(window);
                         window.display();
-
+                        
                     }
                     break;
                     //end of Main Menu
-                
                     
-            // Close window: exi/Users/Wicky/Desktop/ResourcePath.mmt
-            if (event.type == sf::Event::Closed) {
-                window.close();
+                    
+                    // Close window: exi/Users/Wicky/Desktop/ResourcePath.mmt
+                    if (event.type == sf::Event::Closed) {
+                        window.close();
+                    }
+                    
+                    // Escape pressed: exit
+                    if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right) {
+                        window.clear();
+                    }
             }
             
-            // Escape pressed: exit
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right) {
-                window.clear();
-            }
+            window.clear();
+            window.draw(sprite);
+            window.draw(text);
+            window.draw(spaceText);
+            window.display();
+            
         }
-            
-        window.clear();
-        window.draw(sprite);
-        window.draw(text);
-        window.draw(spaceText);
-        window.display();
-    
+        
     }
     
 }
 
-}
