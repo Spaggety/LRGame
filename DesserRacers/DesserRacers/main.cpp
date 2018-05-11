@@ -90,11 +90,7 @@ int main(int, char const**)
     sf::Text gameOver("GAME OVER", font, 80);
     gameOver.setPosition(20, 200);
     gameOver.setFillColor(sf::Color::Red);
-    
-    sf::Text scoreEnd("Your Score", font, 80);
-    scoreEnd.setPosition(20,300);
-    scoreEnd.setFillColor(sf::Color::Green);
-    
+   
     
     //*********************************************************************************************************
     //Description:
