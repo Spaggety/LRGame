@@ -90,6 +90,10 @@ int main(int, char const**)
         return EXIT_FAILURE;
     }
     music.play();
+
+	//projectile and colliding 
+
+
    
     //FIRST GAME LOOP
     while(window.isOpen()){
@@ -164,9 +168,18 @@ int main(int, char const**)
                                                     window.draw(obstacleArray2[counter].rectangle);
                                                 }
                                                 counter++;
+												
                                                 
                                             }
-                                            
+											//collision loop
+											counter=0;
+											for(iter = obstacleArray1.begin(); iter != obstacleArray1.end(); iter++){
+                                                if(obstacleArray1[counter].rect.getGlobalBounds().intersect(redCar1().rect.getGlobalBounds())){
+                                                 	cout << "crash" << endl;
+                                            	}
+												counter++;
+                                            }
+											
                                             redCar1.movement();
                                             window.draw(redCar1.sprite);
                                             window.display();
