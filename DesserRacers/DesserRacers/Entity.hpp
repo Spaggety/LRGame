@@ -6,7 +6,8 @@
 //  Copyright © 2018 Enrique Mosqueda. All rights reserved.
 //
 
-#pragma once
+#ifndef ENT
+#define ENT
 #include <stdio.h>
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
@@ -31,3 +32,4 @@ public:
     sf::Text text;
     sf::Texture texture;
 };
+#endif

@@ -61,6 +61,7 @@ int main(int, char const**)
     sf::Font font;
     if (!font.loadFromFile(resourcePath() + "baby blocks.ttf"))
         return EXIT_FAILURE;
+
     sf::Text text("PRESS THE", font, 40);
     sf::Text spaceText("SPACE", font, 50);
     text.setPosition(10, 780);
@@ -127,7 +128,7 @@ int main(int, char const**)
     //      ___Intro Music___
     sf::Music music;
     if (!music.openFromFile(resourcePath() + "videoplayback.ogg"))
-        return EXIT_FAILURE;
+    return EXIT_FAILURE;
     music.play();
     sf::SoundBuffer soundBuffer;
     sf::Sound carStartUp;

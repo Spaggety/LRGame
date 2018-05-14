@@ -5,8 +5,8 @@
 //  Created by Enrique Mosqueda on 5/3/18.
 //  Copyright © 2018 Enrique Mosqueda. All rights reserved.
 //
-#pragma once
-
+#ifndef OBS
+#define OBS
 #include "Entity.hpp"
 #include <random>
 
@@ -18,3 +18,4 @@ public:
     void updating();
     int speed = 2;
 };
+#endif
