@@ -13,11 +13,14 @@ Obstacle::Obstacle(){
     int derivedRandomNum = (rand() % 462) + 153;
     num1 = (rand() % derivedRandomNum) + 152;
     
-    rectangle.setSize(sf::Vector2f(32,32));
-    rectangle.setPosition(num1,-200);
-    rectangle.setFillColor(sf::Color::Red);
+    rectangle.setSize(sf::Vector2f(85,70));
+    rectangle.setPosition(num1,-500);
+    rectangle.setFillColor(sf::Color::Yellow);
 }
 void Obstacle::updating(){
     rectangle.move(0, speed);
+
+    //setting sprite @ rectangle position
+    sprite.setPosition(rectangle.getPosition());
 }
 

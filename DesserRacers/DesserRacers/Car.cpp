@@ -8,9 +8,10 @@
 
 #include "Car.hpp"
 Car::Car(){
-    rectangle.setSize(sf::Vector2f(46,80));
+    rectangle.setSize(sf::Vector2f(80,80));
     rectangle.setPosition(384,800);
     rectangle.setFillColor(sf::Color::Red);
+    
     sprite.setTextureRect(sf::IntRect(0,0, 80, 80));
 }
 
@@ -31,4 +32,7 @@ void Car::movement(){
     counterMoves++;
     if(counterMoves==2)
         counterMoves=0;
+    sprite.setPosition(rectangle.getPosition());
+
+
 }

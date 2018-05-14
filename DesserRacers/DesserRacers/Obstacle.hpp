@@ -16,5 +16,5 @@ public:
     Obstacle();
     
     void updating();
-    int speed = 3;
+    int speed = 2;
 };

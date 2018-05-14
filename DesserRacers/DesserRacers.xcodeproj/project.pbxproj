@@ -20,6 +20,11 @@
 		9BCAC799209A8CD3000E5638 /* redCar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC798209A8CD3000E5638 /* redCar.png */; };
 		9BCAC79B209AA28A000E5638 /* gameBackground2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC79A209AA28A000E5638 /* gameBackground2.png */; };
 		9BCAC79E209BCD82000E5638 /* Obstacle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC79C209BCD82000E5638 /* Obstacle.cpp */; };
+		9BCAC80F20A971CF000E5638 /* highScore.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC80E20A971CF000E5638 /* highScore.txt */; };
+		9BCAC81320A97605000E5638 /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81220A97605000E5638 /* gameOver.png */; };
+		9BCAC81520A982FF000E5638 /* Capture it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81420A982FE000E5638 /* Capture it.ttf */; };
+		9BCAC81720A98BA4000E5638 /* carstartgarage.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81620A98BA4000E5638 /* carstartgarage.wav */; };
+		9BCAC81920A98E76000E5638 /* piggy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81820A98E76000E5638 /* piggy2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		9BCAC79A209AA28A000E5638 /* gameBackground2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameBackground2.png; path = ../../../../gameBackground2.png; sourceTree = "<group>"; };
 		9BCAC79C209BCD82000E5638 /* Obstacle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Obstacle.cpp; sourceTree = "<group>"; };
 		9BCAC79D209BCD82000E5638 /* Obstacle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Obstacle.hpp; sourceTree = "<group>"; };
+		9BCAC80E20A971CF000E5638 /* highScore.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = highScore.txt; path = ../../../../highScore.txt; sourceTree = "<group>"; };
+		9BCAC81220A97605000E5638 /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameOver.png; path = ../../../../gameOver.png; sourceTree = "<group>"; };
+		9BCAC81420A982FE000E5638 /* Capture it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Capture it.ttf"; path = "../../../../Capture it.ttf"; sourceTree = "<group>"; };
+		9BCAC81620A98BA4000E5638 /* carstartgarage.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = carstartgarage.wav; path = ../../../../carstartgarage.wav; sourceTree = "<group>"; };
+		9BCAC81820A98E76000E5638 /* piggy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = piggy2.png; path = ../../../../piggy2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,11 @@
 		9B85809520956CC800A2922B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9BCAC81820A98E76000E5638 /* piggy2.png */,
+				9BCAC81620A98BA4000E5638 /* carstartgarage.wav */,
+				9BCAC81420A982FE000E5638 /* Capture it.ttf */,
+				9BCAC81220A97605000E5638 /* gameOver.png */,
+				9BCAC80E20A971CF000E5638 /* highScore.txt */,
 				9BCAC79A209AA28A000E5638 /* gameBackground2.png */,
 				9BCAC798209A8CD3000E5638 /* redCar.png */,
 				9BCAC79020993847000E5638 /* desertMenu3.png */,
@@ -172,12 +187,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BCAC75820981C96000E5638 /* baby blocks.ttf in Resources */,
+				9BCAC81520A982FF000E5638 /* Capture it.ttf in Resources */,
 				9BCAC79120993848000E5638 /* desertMenu3.png in Resources */,
+				9BCAC81920A98E76000E5638 /* piggy2.png in Resources */,
+				9BCAC80F20A971CF000E5638 /* highScore.txt in Resources */,
 				9B85809B20956CC800A2922B /* sansation.ttf in Resources */,
 				9BCAC799209A8CD3000E5638 /* redCar.png in Resources */,
 				9BCAC78920983959000E5638 /* videoplayback.ogg in Resources */,
 				9B8580A82095702300A2922B /* Surface.png in Resources */,
+				9BCAC81720A98BA4000E5638 /* carstartgarage.wav in Resources */,
 				9BCAC79B209AA28A000E5638 /* gameBackground2.png in Resources */,
+				9BCAC81320A97605000E5638 /* gameOver.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
