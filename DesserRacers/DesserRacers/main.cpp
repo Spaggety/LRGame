@@ -17,6 +17,7 @@
 #include <SFML/Graphics.hpp>
 
 // Here is a small helper for you! Have a look.
+#include "GameOverMenu.hpp"
 #include "ResourcePath.hpp"
 #include "MainMenu.hpp"
 #include "Car.hpp"
@@ -26,7 +27,7 @@
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 1024
 #define SCREEN_TITLE "Sierra Racers"
-#define OBSTACLE_SPAWN_FREQUENCY 0.6f
+#define OBSTACLE_SPAWN_FREQUENCY 0.9f
 
 using namespace std;
 int main(int, char const**)
@@ -120,8 +121,11 @@ int main(int, char const**)
     numberForCurrentScore.setPosition(570, 318);
     numberForCurrentScore.setFillColor(sf::Color::White);
     //      ____DistanceTracker_____
-    sf::Text distanceText("km", numberFont, 40);
+    sf::Text distanceText("km", numberFont, 60);
     distanceText.setFillColor(sf::Color::Black);
+    //      ____GameOverMenu____
+    GameOverMenu gameOverMenu(window.getSize().x, window.getSize().y);
+    
     
     //*********************************************************************************************************
     //      MUSIC/SOUND RESOURCE RECOVERY
@@ -212,7 +216,7 @@ int main(int, char const**)
                                                 counter++;
                                             }
                                             //Distance Tracker
-                                            if(distanceClock.getElapsedTime().asSeconds() > 2.0f && pause == false){
+                                            if(distanceClock.getElapsedTime().asSeconds() > .5f && pause == false){
                                                 if(pause == false){
                                                     distance += 1;
                                                 }
@@ -245,12 +249,17 @@ int main(int, char const**)
                                                 numberForCurrentScore.setString(to_string(distance) + " km");
                                                 window.draw(numberForCurrentScore);
                                                 music.pause();
+
+                                                
+                                                
+                                                
+                                                gameOverMenu.draw(window);
                                                 
                                             }
                                             if(pause == false){
                                                 redCar1.movement();
                                             }
-                                            window.draw(redCar1.rectangle);
+//                                            window.draw(redCar1.rectangle);
                                             window.draw(redCar1.sprite);
                                             distanceText.setString(to_string(distance) + " km");
                                             window.draw(distanceText);
