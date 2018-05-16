@@ -10,21 +10,21 @@
 #include <iostream>
 using namespace std;
 GameOverMenu::GameOverMenu(float width, float height){
-    if(!font.loadFromFile(resourcePath() + "baby blocks.ttf")){
-        cout << 1;;
+    if(!font.loadFromFile(resourcePath() + "Capture it.ttf")){
+        cout << 1;
     }
     
     menu[0].setFont(font);
     menu[0].setFillColor(sf::Color::White);
     menu[0].setString("Play Again");
-    menu[0].setCharacterSize(40);
-    menu[0].setPosition(180,550);
+    menu[0].setCharacterSize(30);
+    menu[0].setPosition(200,560);
     
     menu[1].setFont(font);
     menu[1].setFillColor(sf::Color::White);
     menu[1].setString("Exit");
-    menu[1].setCharacterSize(40);
-    menu[1].setPosition(420,550);
+    menu[1].setCharacterSize(30);
+    menu[1].setPosition(465,560);
 
     
 }
@@ -48,7 +48,7 @@ void GameOverMenu::moveUp()
 }
 void GameOverMenu::moveDown()
 {
-    if (MAX_NUMBER_OF_ITMES - 2 <= selectedItem + 1 && selectedItem + 1 <= MAX_NUMBER_OF_ITMES-1)
+    if (MAX_NUMBER_OF_ITMES - 3 <= selectedItem + 1 && selectedItem + 1 <= MAX_NUMBER_OF_ITMES-2)
     {
         menu[selectedItem].setFillColor(sf::Color::White);
         selectedItem++;

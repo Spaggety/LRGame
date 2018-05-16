@@ -36,6 +36,7 @@ int main(int, char const**)
     int counter = 0;
     int distance = 1;
     bool pause = false;
+    bool keepGoing =false;
     
     //*********************************************************************************************************
     //Description: Creates window with defined parameters from #include DEFINED.HPP
@@ -46,7 +47,7 @@ int main(int, char const**)
     //      ____IntroBackground____
     sf::Texture texture;
     if (!texture.loadFromFile(resourcePath() + "Surface.png"))
-        return EXIT_FAILURE;
+        return -1;
     sf::Sprite sprite(texture);
     
     //*********************************************************************************************************
@@ -54,22 +55,28 @@ int main(int, char const**)
     //      ____Background____
     sf::Texture sierra;
     if(!sierra.loadFromFile(resourcePath() + "desertMenu3.png"))
-        return EXIT_FAILURE;
+        return -1;
     sf::Sprite sierraMenu(sierra);
     //      ____Menu____
     MainMenu menu(window.getSize().x, window.getSize().y);
     
     sf::Font font;
     if (!font.loadFromFile(resourcePath() + "baby blocks.ttf"))
-        return EXIT_FAILURE;
+        return -1;
+    //      ____FontForDistance____
+    sf::Font numberFont;
+    if (!numberFont.loadFromFile(resourcePath() + "Capture it.ttf"))
+        return -1;
 
-    sf::Text text("PRESS THE", font, 40);
-    sf::Text spaceText("SPACE", font, 50);
-    text.setPosition(10, 780);
+    sf::Text text("PRESS THE", numberFont, 50);
+    sf::Text spaceText("SPACE", numberFont, 60);
+    sf::Text barKey("BAR", numberFont, 70);
+    text.setPosition(40, 780);
     text.setFillColor(sf::Color::White);
-    spaceText.setPosition(400, 780);
+    spaceText.setPosition(310, 790);
     spaceText.setFillColor(sf::Color::Black);
-    
+    barKey.setPosition(520, 810);
+    barKey.setFillColor(sf::Color::Yellow);
     //*********************************************************************************************************
     //       IN GAME RESOURCE RECOVERY
     //       ____Car____
@@ -108,10 +115,6 @@ int main(int, char const**)
     }
     sf::Sprite gameOverTexture(gameOver);
     gameOverTexture.setPosition(90, 200);
-    //      ____FontForDistance____
-    sf::Font numberFont;
-    if (!numberFont.loadFromFile(resourcePath() + "Capture it.ttf"))
-        return EXIT_FAILURE;
     //      ____BestScore____
     sf::Text numberForHighScore("0" ,numberFont, 30);
     numberForHighScore.setPosition(570, 394);
@@ -125,6 +128,12 @@ int main(int, char const**)
     distanceText.setFillColor(sf::Color::Black);
     //      ____GameOverMenu____
     GameOverMenu gameOverMenu(window.getSize().x, window.getSize().y);
+    //      ____GrayBackground____
+    sf::Texture grayBackground;
+    if(!grayBackground.loadFromFile(resourcePath() + "gray.png"))
+        return -1;
+    sf::Sprite grayBackgroundTexture(grayBackground);
+    grayBackgroundTexture.setPosition(170, 550);
     
     
     //*********************************************************************************************************
@@ -136,9 +145,9 @@ int main(int, char const**)
     music.play();
     sf::SoundBuffer soundBuffer;
     sf::Sound carStartUp;
-    if(!soundBuffer.loadFromFile(resourcePath() + "carstartgarage.wav"))
-       return EXIT_FAILURE;
-    carStartUp.setBuffer(soundBuffer);
+//    if(!soundBuffer.loadFromFile(resourcePath() + "carCrash.wav"))
+//       return EXIT_FAILURE;
+//    carStartUp.setBuffer(soundBuffer);
     
     
     //FIRST GAME LOOP
@@ -169,6 +178,7 @@ int main(int, char const**)
                                 {
                                     case 0:
                                         //Enters Game State
+                                        distanceClock.restart();
                                         while (window.isOpen())
                                         {
                                             while (window.pollEvent(event))
@@ -178,9 +188,10 @@ int main(int, char const**)
                                                     window.close();
                                                 }
                                                 // Escape pressed: exit
-                                                if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right) {
+                                                if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                                                     window.clear();
                                                 }
+                                                
                                             }
                                             window.clear();
                                             redCar1.updating();
@@ -197,8 +208,34 @@ int main(int, char const**)
                                             counter = 0;
                                             for(iter = obstacleArray1.begin(); iter != obstacleArray1.end(); iter++){
                                                 if(pause == false){
+                                                    srand(time(0));
+                                                    int derivedRandomNum = (rand() % 8)+1;
+                                                    if(derivedRandomNum == 1){
+                                                        obstacle.rectangle.setPosition(150,-500);
+                                                    }
+                                                    else if(derivedRandomNum == 2){
+                                                        obstacle.rectangle.setPosition(200, -500);
+                                                    }
+                                                    else if(derivedRandomNum == 3){
+                                                        obstacle.rectangle.setPosition(250, -500);
+                                                    }
+                                                    else if(derivedRandomNum == 4){
+                                                        obstacle.rectangle.setPosition(300,-500);
+                                                    }
+                                                    else if(derivedRandomNum == 5){
+                                                        obstacle.rectangle.setPosition(350,-500);
+                                                    }
+                                                    else if(derivedRandomNum == 6){
+                                                        obstacle.rectangle.setPosition(400, -500);
+                                                    }
+                                                    else if(derivedRandomNum == 7){
+                                                        obstacle.rectangle.setPosition(450, -500);
+                                                    }
+                                                    else{
+                                                        obstacle.rectangle.setPosition(500,-500);
+                                                    }
+                                                    
                                                     obstacleArray1[counter].updating();
-                                                    window.draw(obstacleArray1[counter].rectangle);
                                                     window.draw(obstacleArray1[counter].sprite);
                                                     counter++;
                                                 }
@@ -226,6 +263,8 @@ int main(int, char const**)
                                             
                                             
                                             if(pause == true){
+                                                carStartUp.play();
+                                                music.setVolume(30);
                                                 window.draw(gameOverTexture);
                                                 ifstream readFile;
                                                 readFile.open("/Users/Wicky/Desktop/highScore.txt");
@@ -248,12 +287,39 @@ int main(int, char const**)
                                                 window.draw(numberForHighScore);
                                                 numberForCurrentScore.setString(to_string(distance) + " km");
                                                 window.draw(numberForCurrentScore);
-                                                music.pause();
-
-                                                
-                                                
-                                                
+//                                                music.pause();
+                                                while (window.pollEvent(event)){
+                                                    switch (event.key.code){
+                                                        case sf::Keyboard::Left:
+                                                            gameOverMenu.moveUp();
+                                                            break;
+                                                        case sf::Keyboard::Right:
+                                                            gameOverMenu.moveDown();
+                                                            break;
+                                                        case sf::Keyboard::Return:
+                                                            switch (gameOverMenu.getSelectedItemIndex())
+                                                        {
+                                                            case 0:
+                                                                for(int i = 0; i < obstacleArray1.size(); i++){
+                                                                    obstacleArray1.pop_back();
+                                                                }
+                                                                music.setVolume(100);
+                                                                pause = false;
+                                                                distance = 0;
+                                                                redCar1.rectangle.setPosition(384,800);
+                                                                
+                                                                break;
+                                                                
+                                                            case 1:
+                                                                window.close();
+                                                                break;
+                                                                
+                                                        }
+                                                    }
+                                                }
+                                                window.draw(grayBackgroundTexture);
                                                 gameOverMenu.draw(window);
+                                                
                                                 
                                             }
                                             if(pause == false){
@@ -266,6 +332,7 @@ int main(int, char const**)
                                             window.display();
                                         }
                                         //ends Game State
+                                        break;
                                     case 1:
                                         cout << "Options" << endl;
                                         break;
@@ -304,15 +371,13 @@ int main(int, char const**)
                     }
                     
                     // Escape pressed: exit
-                    if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Right) {
+                    if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                         window.clear();
                     }
             }
             
             window.clear();
             window.draw(sprite);
-            window.draw(text);
-            window.draw(spaceText);
             window.display();
             
         }

@@ -26,6 +26,7 @@
 		9BCAC81920A98E76000E5638 /* piggy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81820A98E76000E5638 /* piggy2.png */; };
 		9BCAC81B20AA4F6E000E5638 /* baby blocks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81A20AA4F6D000E5638 /* baby blocks.ttf */; };
 		9BCAC81E20AA5B27000E5638 /* GameOverMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCAC81C20AA5B27000E5638 /* GameOverMenu.cpp */; };
+		9BCAC82020AADAE4000E5638 /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCAC81F20AADAE4000E5638 /* gray.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9BCAC81A20AA4F6D000E5638 /* baby blocks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "baby blocks.ttf"; path = "../../../../baby blocks.ttf"; sourceTree = "<group>"; };
 		9BCAC81C20AA5B27000E5638 /* GameOverMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverMenu.cpp; sourceTree = "<group>"; };
 		9BCAC81D20AA5B27000E5638 /* GameOverMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOverMenu.hpp; sourceTree = "<group>"; };
+		9BCAC81F20AADAE4000E5638 /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gray.png; path = ../../../../gray.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		9B85809520956CC800A2922B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9BCAC81F20AADAE4000E5638 /* gray.png */,
 				9BCAC81A20AA4F6D000E5638 /* baby blocks.ttf */,
 				9BCAC81820A98E76000E5638 /* piggy2.png */,
 				9BCAC81620A98BA4000E5638 /* carstartgarage.wav */,
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BCAC81520A982FF000E5638 /* Capture it.ttf in Resources */,
+				9BCAC82020AADAE4000E5638 /* gray.png in Resources */,
 				9BCAC79120993848000E5638 /* desertMenu3.png in Resources */,
 				9BCAC81920A98E76000E5638 /* piggy2.png in Resources */,
 				9BCAC80F20A971CF000E5638 /* highScore.txt in Resources */,

@@ -8,7 +8,8 @@
 #include <SFML/Graphics.hpp>
 
 #pragma once
-#define MAX_NUMBER_OF_ITMES 2
+const int MAX_NUMBER_OF_ITMES = 3;
+
 
 class GameOverMenu {
     

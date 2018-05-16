@@ -13,7 +13,7 @@
 using namespace std;
 MainMenu::MainMenu(float width, float height){
     if(!font.loadFromFile(resourcePath() + "baby blocks.ttf")){
-        cout << 1;;
+        cout << 1;
     }
 
     menu[0].setFont(font);
